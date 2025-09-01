@@ -16,7 +16,7 @@
   "schema": {
     "separator": "_",                // Character to separate nested field names
     "case": "snake",                 // "snake", "camel", "pascal", or "as_is"
-    "max_depth": 3,                  // Maximum nesting depth for complex objects
+    "max_depth": 3,                  // Maximum nesting depth for complex objects.
     "max_array_items": 3,            // Number of array items to expand into columns
     "include_fields": [],            // If not empty, only include these root-level fields
     "exclude_fields": [              // Always exclude these fields
