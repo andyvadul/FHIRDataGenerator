@@ -1,0 +1,25 @@
+# FHIR Resource Data Generator - Development Requirements
+# Install with: pip install -r requirements-dev.txt
+
+# Core FHIR Support
+fhir.resources>=7.0.0          # FHIR R4/R5 resource models with Pydantic support
+
+# Data Processing & Export
+pandas>=1.5.0                  # DataFrame operations and CSV export
+pyarrow>=10.0.0                # Parquet format support with compression
+
+# Configuration File Support (Optional)
+json5                          # Enhanced JSON with comments support (JSONC files)
+setuptools
+
+# Development & Quality Tools
+pytest>=7.0.0                  # Testing framework
+pytest-cov                     # Test coverage reporting
+black                          # Code formatting
+flake8                         # Code linting
+mypy                           # Type checking
+pre-commit                     # Git hooks for code quality
+
+# Documentation (Optional)
+mkdocs                         # Documentation generation
+mkdocs-material                # Material theme for docs

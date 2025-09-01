@@ -1,0 +1,13 @@
+# FHIR Resource Data Generator - Production Requirements
+# Minimal dependencies for running the generator
+
+# Core FHIR Support
+fhir.resources>=7.0.0
+
+# Data Processing & Export  
+pandas>=1.5.0
+pyarrow>=10.0.0
+
+# Optional: Enhanced JSON support
+json5
+setuptools

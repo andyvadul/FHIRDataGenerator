@@ -1,0 +1,39 @@
+{
+  // FHIR Resource Data Generation Configuration
+  // Save this file as "generate_fhir_data.jsonc" in the same directory as your Python script
+  
+  // FHIR resource to generate (Patient, Observation, Encounter, etc.)
+  "resource_type": "Observation",
+  
+  // Output configuration
+  "output": {
+    "format": "parquet+zstd",        // "csv", "parquet", or "parquet+zstd" (recommended)
+    "path": "",                      // Leave empty for auto-generated filename
+    "count": 10                    // Number of records to generate
+  },
+  
+  // Schema flattening configuration
+  "schema": {
+    "separator": "_",                // Character to separate nested field names
+    "case": "snake",                 // "snake", "camel", "pascal", or "as_is"
+    "max_depth": 3,                  // Maximum nesting depth for complex objects
+    "max_array_items": 3,            // Number of array items to expand into columns
+    "include_fields": [],            // If not empty, only include these root-level fields
+    "exclude_fields": [              // Always exclude these fields
+      "contained",
+      "meta", 
+      "extension", 
+      "modifierExtension",
+      "implicitRules"
+    ]
+  },
+  
+  // FHIR version
+  "fhir_version": "R4",             // "R4" or "R5"
+  
+  // Optional: Data generation preferences
+  "data_generation": {
+    "seed": null,                    // Random seed for reproducible data (null = random)
+    "locale": "en_US"                // Locale for generated data
+  }
+}
